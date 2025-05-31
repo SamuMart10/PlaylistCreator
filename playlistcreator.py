@@ -62,3 +62,8 @@ def callback():
 
 if __name__ == '__main__':
     app.run(port=8888)
+import os
+
+if __name__ == '__main__':
+    port = int(os.environ.get('PORT', 10000))  # Render usa PORT dinámico
+    app.run(host='0.0.0.0', port=port)
